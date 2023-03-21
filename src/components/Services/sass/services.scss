@@ -1,0 +1,106 @@
+@use "../../../sass/base/mixin" as *;
+@use "../../../sass/base/vars" as *;
+@use "../../../sass/base/function" as *;
+
+@include fontFace("Khula", "../../../../public/assets/fonts/Khula/Khula-Regular.ttf");
+
+.services {
+    text-align: center;
+    font-family: "Khula";
+    padding-top: 60px;
+    padding-bottom: 52px;
+    background-color: #F5F5F5;
+    color: $text-primary;
+    .pen {
+        position: absolute;
+        left: 8%;
+        top: -12px;
+        mix-blend-mode: soft-light;
+    }
+    .rect {
+        margin-bottom: 34px;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 16px;
+        margin-bottom: 50px;
+        .card {
+            text-align: center;
+            p {
+                font-size: pxToRem(24);
+                font-weight: 700;
+                margin-bottom: 12px;
+            }
+            div {
+                background-color: $white;
+                padding: 22px 0px;
+                border-radius: 9px;
+                border: 2px dashed #fff;
+                background:
+                linear-gradient(#fff 0 0) padding-box,
+                linear-gradient(to right, #1B004F 19.27%, #E33EAF 101.85%, #C637A0 101.86%) border-box;
+            }
+        }
+    }
+    .boxes {
+        justify-content: center;
+        gap: 14px;
+    }
+}
+
+/*------------ Start Media Query ------------*/
+
+// XSmall Media Query
+
+@media all and (max-width: 575px) {
+    .services {
+        overflow: hidden;
+        .cards {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}
+
+// Small Media Query
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+    .services {
+        .cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+// Medium Media Query
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .services {
+        .cards {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+// Large Media Query
+
+@media all and (min-width: 992px) and (max-width: 1199px) {
+    .services {
+        .cards {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+
+// XLarge Media Query
+
+@media all and (min-width: 1200px) and (max-width: 1500px) {
+    .services {
+        .cards {
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+}
+
+/*------------ End Media Query ------------*/

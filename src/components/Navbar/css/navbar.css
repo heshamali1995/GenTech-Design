@@ -1,0 +1,153 @@
+nav::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #fff;
+}
+
+nav::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  z-index: 10;
+  background-color: #fff;
+  width: 8px;
+  height: 8px;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../../../../public/assets/fonts/Inter/static/Inter-Regular.ttf");
+}
+nav {
+  font-family: "Inter";
+  padding-top: 12px;
+  padding-bottom: 8px;
+  z-index: 100;
+}
+nav::after {
+  bottom: 0px;
+  left: 0px;
+  width: 80.7%;
+}
+nav::before {
+  bottom: -3px;
+  left: 80.7%;
+}
+nav .settings ul {
+  list-style-type: none;
+}
+nav .settings .lists {
+  gap: 25px;
+  margin-right: 59px;
+}
+nav .settings .lists li {
+  cursor: pointer;
+}
+nav .settings .lists .active {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+nav .settings .lang {
+  gap: 9px;
+  cursor: pointer;
+}
+nav .settings .lang li {
+  display: none;
+  font-weight: 500;
+  padding: 2px 10px;
+  border-radius: 13px;
+}
+nav .settings .lang .show {
+  display: block;
+}
+nav .settings .lang .active {
+  display: block;
+  background-color: #D4B4DD;
+  color: #1C0050;
+  font-weight: 700;
+}
+nav .burger {
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  display: none;
+}
+nav .burger-menu {
+  position: absolute;
+  left: 0px;
+  width: 80%;
+  margin-left: 10%;
+  background: #FF717D;
+  color: #fff;
+  list-style: none;
+  font-family: "Inter";
+  border-radius: 13px;
+  text-align: center;
+  padding: 10px;
+  z-index: 1000;
+  transition: all 0.4s linear;
+}
+nav .burger-menu li {
+  margin-bottom: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+nav .burger-menu .active {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+nav .burger-menu li:last-of-type {
+  margin-bottom: 0px;
+}
+nav .show {
+  top: 100px;
+}
+nav .hide {
+  top: -500px;
+}
+
+/*------------ Start Media Query ------------*/
+@media all and (max-width: 767px) {
+  nav .container .logo {
+    max-width: 50%;
+    max-height: 50%;
+  }
+  nav .container .settings .burger {
+    display: block;
+    margin-right: 20px;
+  }
+  nav .container .settings .lists {
+    display: none;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  nav .container .logo {
+    margin-right: 50px;
+  }
+  nav .container .burger-menu {
+    display: none;
+  }
+  nav .container .settings .lists {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-right: 20px;
+  }
+}
+@media all and (min-width: 992px) and (max-width: 1199px) {
+  nav .container .logo {
+    margin-right: 20px;
+  }
+  nav .settings .lists {
+    gap: 15px;
+    margin-right: 20px;
+  }
+}
+@media all and (min-width: 1200px) and (max-width: 1918px) {
+  nav .settings .lists {
+    gap: 20px;
+  }
+}
+/*------------ End Media Query ------------*/
+
+/*# sourceMappingURL=navbar.css.map */

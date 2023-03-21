@@ -1,0 +1,86 @@
+@use "../../../sass/base/vars" as *;
+
+.clients {
+    background: #F5F5F5;
+    color: $text-primary;
+    padding-top: 45px;
+    padding-bottom: 60px;
+    text-align: center;
+    .line1,
+    .line2 {
+        position: absolute;
+        top: 72px;
+    }
+    .line1 {
+        left: 0px;
+    }
+    .line2 {
+        right: 0px;
+    }
+    .rect {
+        margin-bottom: 30px;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 18px;
+    }
+}
+
+/*------------ Start Media Query ------------*/
+
+// XSmall to XLarge Media Query
+
+@media all and (max-width: 1918px) {
+    .clients {
+        .line1,
+        .line2 {
+            display: none;
+        }
+        .cards {
+            justify-content: center;
+        }
+    }
+}
+
+// XSmall Media Query
+
+@media all and (max-width: 575px) {
+    .clients {
+        .cards {
+            grid-template-columns: repeat(1, auto);
+        }
+    }
+}
+
+// Small Media Query
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+    .clients {
+        .cards {
+            grid-template-columns: repeat(2, auto);
+        }
+    }
+}
+
+// Medium Media Query
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .clients {
+        .cards {
+            grid-template-columns: repeat(3, auto);
+        }
+    }
+}
+
+// Medium Media Query
+
+@media all and (min-width: 992px) and (max-width: 1500px) {
+    .clients {
+        .cards {
+            grid-template-columns: repeat(4, auto);
+        }
+    }
+}
+
+/*------------ End Media Query ------------*/

@@ -1,0 +1,17 @@
+@use "./vars" as *;
+
+%line {
+    content: "";
+    position: absolute;
+    border: 1px solid $white;
+}
+
+%circle {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    z-index: 10;
+    background-color: $white;
+    width: 8px;
+    height: 8px;
+}

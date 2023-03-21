@@ -1,0 +1,138 @@
+@use "./base/vars" as *;
+@use "./base/mixin" as *;
+@use "./base/function" as *;
+
+@include fontFace("Roboto", "../../public/assets/fonts/Roboto/Roboto-Regular.ttf");
+@include fontFace("Khula", "../../public/assets/fonts/Khula/Khula-Regular.ttf");
+
+/*------------ Start Global Styles ------------*/
+
+html {
+    font-size: 1rem;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 61.44%;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.center {
+    align-items: center;
+}
+
+.relative {
+    position: relative;
+}
+
+h3 {
+    font-size: pxToRem(48);
+    font-weight: 700;
+    font-family: "Khula";
+    margin-bottom: 30px;
+}
+
+.btn {
+    background-color: $bg-primary;
+    color: $white;
+    outline: 0;
+    border: 0;
+    font-family: "Roboto";
+    font-size: pxToRem(19);
+    padding: 18px 8px;
+    font-weight: 500;
+    border-radius: 9px;
+    cursor: pointer;
+    &:active {
+        transform: scale(0.97);
+    }
+}
+
+/*------------ End Global Styles ------------*/
+
+.navigate {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 550px;
+    right: 30px;
+    background-color: $bg-primary;
+    z-index: 1000;
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.07 );
+    cursor: pointer;
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $white;
+    }
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
+/*------------ Start Media Queries ------------*/
+
+// XSmall Media Query
+
+@media all and (max-width: 575px) {
+    html {
+        font-size: 0.7rem;
+    }
+    .container {
+        width: 90%;
+    }
+}
+
+// Small Media Query
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+    html {
+        font-size: 0.8rem;
+    }
+    .container {
+        width: 85%;
+    }
+}
+
+// Medium Media Query
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    html {
+        font-size: 0.9rem;
+    }
+    .container {
+        width: 80%;
+    }
+}
+
+// Large Media Query
+
+@media all and (min-width: 992px) and (max-width: 1199px) {
+    html {
+        font-size: 0.9rem;
+    }
+    .container {
+        width: 75%;
+    }
+}
+
+// XLarge Media Query
+
+@media all and (min-width: 1200px) and (max-width: 1918px) {
+    .container {
+        width: 70%;
+    }
+}
+
+/*------------ End Media Queries ------------*/

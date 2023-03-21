@@ -1,0 +1,176 @@
+@use "../../../sass/base/mixin" as *;
+@use "../../../sass/base/vars" as *;
+@use "../../../sass/base/placeholder" as *;
+
+@include fontFace("Inter", "../../../../public/assets/fonts/Inter/static/Inter-Regular.ttf");
+
+nav {
+    font-family: "Inter";
+    padding-top: 12px;
+    padding-bottom: 8px;
+    z-index: 100;
+    &::after {
+        @extend %line;
+        bottom: 0px;
+        left: 0px;
+        width: 80.7%;
+    }
+    &::before {
+        @extend %circle;
+        bottom: -3px;
+        left: 80.7%;
+    }
+    .settings {
+        ul {
+            list-style-type: none;
+        }
+        .lists {
+            gap: 25px;
+            margin-right: 59px;
+            li {
+                cursor: pointer;
+            }
+            .active {
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+        }
+        .lang {
+            gap: 9px;
+            cursor: pointer;
+            li {
+                display: none;
+                font-weight: 500;
+                padding: 2px 10px;
+                border-radius: 13px;
+            }
+            .show {
+                display: block;
+            }
+            .active {
+                display: block;
+                background-color: #D4B4DD;
+                color: $text-primary;
+                font-weight: 700;
+            }
+        }
+    }
+    .burger {
+        color: $white;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        display: none;
+    }
+    .burger-menu {
+        position: absolute;
+        left: 0px;
+        width: 80%;
+        margin-left: 10%;
+        background: $bg-primary;
+        color: $white;
+        list-style: none;
+        font-family: "Inter";
+        border-radius: 13px;
+        text-align: center;
+        padding: 10px;
+        z-index: 1000;
+        transition: all 0.4s linear;
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .active {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        li:last-of-type {
+            margin-bottom: 0px;
+        }
+    }
+    .show {
+        top: 100px;
+    }
+    .hide {
+        top: -500px;
+    }
+}
+
+/*------------ Start Media Query ------------*/
+
+// XSmall To Small Media Query
+
+@media all and (max-width: 767px) {
+    nav {
+        .container {
+            .logo {
+                max-width: 50%;
+                max-height: 50%;
+            }
+            .settings {
+                .burger {
+                    display: block;
+                    margin-right: 20px;
+                }
+                .lists {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// Medium Media Query
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    nav {
+        .container {
+            .logo {
+                margin-right: 50px;
+            }
+            .burger-menu {
+                display: none;
+            }
+            .settings {
+                .lists {
+                    flex-wrap: wrap;
+                    gap: 15px;
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}
+
+// Large Media Query
+
+@media all and (min-width: 992px) and (max-width: 1199px) {
+    nav {
+        .container {
+            .logo {
+                margin-right: 20px;
+            }
+        }
+        .settings {
+            .lists {
+                gap: 15px;
+                margin-right: 20px;
+            }
+        }
+    }
+}
+
+// XLarge Media Query
+
+@media all and (min-width: 1200px) and (max-width: 1918px) {
+    nav {
+        .settings {
+            .lists {
+                gap: 20px;
+            }
+        }
+    }
+}
+
+/*------------ End Media Query ------------*/

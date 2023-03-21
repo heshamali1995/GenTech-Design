@@ -1,0 +1,127 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../public/assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Khula";
+  src: url("../../public/assets/fonts/Khula/Khula-Regular.ttf");
+}
+/*------------ Start Global Styles ------------*/
+html {
+  font-size: 1rem;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 61.44%;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.center {
+  align-items: center;
+}
+
+.relative {
+  position: relative;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Khula";
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #FF717D;
+  color: #fff;
+  outline: 0;
+  border: 0;
+  font-family: "Roboto";
+  font-size: 1.1875rem;
+  padding: 18px 8px;
+  font-weight: 500;
+  border-radius: 9px;
+  cursor: pointer;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+
+/*------------ End Global Styles ------------*/
+.navigate {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: 550px;
+  right: 30px;
+  background-color: #FF717D;
+  z-index: 1000;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+}
+.navigate svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.navigate:active {
+  transform: scale(0.9);
+}
+
+/*------------ Start Media Queries ------------*/
+@media all and (max-width: 575px) {
+  html {
+    font-size: 0.7rem;
+  }
+
+  .container {
+    width: 90%;
+  }
+}
+@media all and (min-width: 576px) and (max-width: 767px) {
+  html {
+    font-size: 0.8rem;
+  }
+
+  .container {
+    width: 85%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    width: 80%;
+  }
+}
+@media all and (min-width: 992px) and (max-width: 1199px) {
+  html {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    width: 75%;
+  }
+}
+@media all and (min-width: 1200px) and (max-width: 1918px) {
+  .container {
+    width: 70%;
+  }
+}
+/*------------ End Media Queries ------------*/
+
+/*# sourceMappingURL=style.css.map */

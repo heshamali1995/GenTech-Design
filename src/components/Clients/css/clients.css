@@ -1,0 +1,60 @@
+.clients {
+  background: #F5F5F5;
+  color: #1C0050;
+  padding-top: 45px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.clients .line1,
+.clients .line2 {
+  position: absolute;
+  top: 72px;
+}
+.clients .line1 {
+  left: 0px;
+}
+.clients .line2 {
+  right: 0px;
+}
+.clients .rect {
+  margin-bottom: 30px;
+}
+.clients .cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+}
+
+/*------------ Start Media Query ------------*/
+@media all and (max-width: 1918px) {
+  .clients .line1,
+.clients .line2 {
+    display: none;
+  }
+  .clients .cards {
+    justify-content: center;
+  }
+}
+@media all and (max-width: 575px) {
+  .clients .cards {
+    grid-template-columns: repeat(1, auto);
+  }
+}
+@media all and (min-width: 576px) and (max-width: 767px) {
+  .clients .cards {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .clients .cards {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media all and (min-width: 992px) and (max-width: 1500px) {
+  .clients .cards {
+    grid-template-columns: repeat(4, auto);
+  }
+}
+/*------------ End Media Query ------------*/
+
+/*# sourceMappingURL=clients.css.map */

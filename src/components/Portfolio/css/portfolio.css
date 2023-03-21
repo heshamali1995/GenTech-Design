@@ -1,0 +1,57 @@
+.portfolio {
+  background: linear-gradient(102.92deg, #1B004E 16.54%, #72068F 65.06%, #4E0E8B 85.68%);
+  color: #fff;
+  padding-top: 53px;
+  padding-bottom: 59px;
+  text-align: center;
+}
+.portfolio .effects {
+  position: absolute;
+  bottom: 49px;
+  left: 6%;
+  z-index: 1;
+}
+.portfolio .rect {
+  margin-bottom: 30px;
+}
+.portfolio .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 19px;
+  margin-bottom: 52px;
+  z-index: 10;
+}
+.portfolio .btn {
+  z-index: 10;
+}
+
+/*------------ Start Media Query ------------*/
+@media all and (max-width: 1918px) {
+  .portfolio .effects {
+    width: 88%;
+  }
+  .portfolio .effects img {
+    width: 100%;
+  }
+  .portfolio .cards .card img {
+    width: 100%;
+  }
+}
+@media all and (max-width: 575px) {
+  .portfolio .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media all and (min-width: 576px) and (max-width: 767px) {
+  .portfolio .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1918px) {
+  .portfolio .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+/*------------ End Media Query ------------*/
+
+/*# sourceMappingURL=portfolio.css.map */

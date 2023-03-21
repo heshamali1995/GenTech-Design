@@ -1,0 +1,151 @@
+@use "../../../sass/base/mixin" as *;
+@use "../../../sass/base/vars" as *;
+@use "../../../sass/base/function" as *;
+
+@include fontFace("Khula", "../../../../public/assets/fonts/Khula/Khula-Regular.ttf");
+@include fontFace("Inter", "../../../../public/assets/fonts/Inter/static/Inter-Regular.ttf");
+
+.about {
+    text-align: center;
+    font-family: "Inter";
+    padding-top: 66px;
+    padding-bottom: 60px;
+    background-color: #F5F5F5;
+    /* Start Absolute Divs */
+    .line9 {
+        position: absolute;
+        bottom: -1px;
+        left: 0px;
+        width: 100%;
+    }
+    .arrow {
+        position: absolute;
+        bottom: 21.6%;
+        right: 11.8%;
+        mix-blend-mode: soft-light;
+    }
+    .line1,
+    .line2 {
+        position: absolute;
+        top: -66px;
+    }
+    .line1 {
+        left: -5px;
+    }
+    .line2 {
+        right: -6px;
+    }
+    .line3,
+    .line4 {
+        position: absolute;
+        top: 22px;
+    }
+    .line3 {
+        right: 0px;
+    }
+    .line4 {
+        left: 0px;
+        transform: rotate(180deg);
+    }
+    /* End Absolute Divs */
+    h3 {
+        color: $text-primary;
+    }
+    .rect {
+        margin-bottom: 47px;
+    }
+    p {
+        font-size: pxToRem(18);
+        font-weight: 500;
+        color: $text-secondary;
+        margin-bottom: 41px;
+        line-height: 24px;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 23px;
+        .card {
+            gap: 21px;
+            p {
+                font-size: pxToRem(16);
+                color: $text-secondary;
+                line-height: 22px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+/*------------ Start Media Query ------------*/
+
+// XSmall Media Query
+
+@media all and (max-width: 575px) {
+    .about {
+        .line9 {
+            bottom: 10px;
+        }
+        .line3,
+        .line4 {
+            width: 20%;
+            overflow: hidden;
+        }
+        .line3 {
+            top: 24px;
+        }
+        /* End Absolute Divs */
+        .cards {
+            grid-template-columns: repeat(1, 1fr);
+            .card {
+                flex-direction: column;
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// Small To Medium Media Query
+
+@media all and (min-width: 576px) and (max-width: 991px) {
+    .about {
+        .line9 {
+            bottom: 10px;
+        }
+        .line3,
+        .line4 {
+            width: 30%;
+            overflow: hidden;
+        }
+        .line3 {
+            top: 24px;
+        }
+        .cards {
+            .card {
+                flex-direction: column;
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// Large To XLarge Media Query
+
+@media all and (min-width: 992px) and (max-width: 1500px) {
+    .about {
+        .line9 {
+            bottom: 2px;
+        }
+        .line3,
+        .line4 {
+            width: 35%;
+            overflow: hidden;
+        }
+    }
+}
+
+/*------------ End Media Query ------------*/

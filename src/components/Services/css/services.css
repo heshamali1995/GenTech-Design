@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Khula";
+  src: url("../../../../public/assets/fonts/Khula/Khula-Regular.ttf");
+}
+.services {
+  text-align: center;
+  font-family: "Khula";
+  padding-top: 60px;
+  padding-bottom: 52px;
+  background-color: #F5F5F5;
+  color: #1C0050;
+}
+.services .pen {
+  position: absolute;
+  left: 8%;
+  top: -12px;
+  mix-blend-mode: soft-light;
+}
+.services .rect {
+  margin-bottom: 34px;
+}
+.services .cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  margin-bottom: 50px;
+}
+.services .cards .card {
+  text-align: center;
+}
+.services .cards .card p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.services .cards .card div {
+  background-color: #fff;
+  padding: 22px 0px;
+  border-radius: 9px;
+  border: 2px dashed #fff;
+  background: linear-gradient(#fff 0 0) padding-box, linear-gradient(to right, #1B004F 19.27%, #E33EAF 101.85%, #C637A0 101.86%) border-box;
+}
+.services .boxes {
+  justify-content: center;
+  gap: 14px;
+}
+
+/*------------ Start Media Query ------------*/
+@media all and (max-width: 575px) {
+  .services {
+    overflow: hidden;
+  }
+  .services .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media all and (min-width: 576px) and (max-width: 767px) {
+  .services .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  .services .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media all and (min-width: 992px) and (max-width: 1199px) {
+  .services .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media all and (min-width: 1200px) and (max-width: 1500px) {
+  .services .cards {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+/*------------ End Media Query ------------*/
+
+/*# sourceMappingURL=services.css.map */

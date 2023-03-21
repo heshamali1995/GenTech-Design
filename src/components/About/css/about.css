@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "Khula";
+  src: url("../../../../public/assets/fonts/Khula/Khula-Regular.ttf");
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../../../../public/assets/fonts/Inter/static/Inter-Regular.ttf");
+}
+.about {
+  text-align: center;
+  font-family: "Inter";
+  padding-top: 66px;
+  padding-bottom: 60px;
+  background-color: #F5F5F5;
+  /* Start Absolute Divs */
+  /* End Absolute Divs */
+}
+.about .line9 {
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+  width: 100%;
+}
+.about .arrow {
+  position: absolute;
+  bottom: 21.6%;
+  right: 11.8%;
+  mix-blend-mode: soft-light;
+}
+.about .line1,
+.about .line2 {
+  position: absolute;
+  top: -66px;
+}
+.about .line1 {
+  left: -5px;
+}
+.about .line2 {
+  right: -6px;
+}
+.about .line3,
+.about .line4 {
+  position: absolute;
+  top: 22px;
+}
+.about .line3 {
+  right: 0px;
+}
+.about .line4 {
+  left: 0px;
+  transform: rotate(180deg);
+}
+.about h3 {
+  color: #1C0050;
+}
+.about .rect {
+  margin-bottom: 47px;
+}
+.about p {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #1B004F;
+  margin-bottom: 41px;
+  line-height: 24px;
+}
+.about .cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 23px;
+}
+.about .cards .card {
+  gap: 21px;
+}
+.about .cards .card p {
+  font-size: 1rem;
+  color: #1B004F;
+  line-height: 22px;
+  text-align: left;
+}
+
+/*------------ Start Media Query ------------*/
+@media all and (max-width: 575px) {
+  .about {
+    /* End Absolute Divs */
+  }
+  .about .line9 {
+    bottom: 10px;
+  }
+  .about .line3,
+.about .line4 {
+    width: 20%;
+    overflow: hidden;
+  }
+  .about .line3 {
+    top: 24px;
+  }
+  .about .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about .cards .card {
+    flex-direction: column;
+  }
+  .about .cards .card p {
+    text-align: center;
+  }
+}
+@media all and (min-width: 576px) and (max-width: 991px) {
+  .about .line9 {
+    bottom: 10px;
+  }
+  .about .line3,
+.about .line4 {
+    width: 30%;
+    overflow: hidden;
+  }
+  .about .line3 {
+    top: 24px;
+  }
+  .about .cards .card {
+    flex-direction: column;
+  }
+  .about .cards .card p {
+    text-align: center;
+  }
+}
+@media all and (min-width: 992px) and (max-width: 1500px) {
+  .about .line9 {
+    bottom: 2px;
+  }
+  .about .line3,
+.about .line4 {
+    width: 35%;
+    overflow: hidden;
+  }
+}
+/*------------ End Media Query ------------*/
+
+/*# sourceMappingURL=about.css.map */

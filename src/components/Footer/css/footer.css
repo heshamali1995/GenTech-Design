@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../../../../public/assets/fonts/Inter/static/Inter-Regular.ttf");
+}
+footer {
+  background: linear-gradient(102.92deg, #1B004E 16.54%, #72068F 65.06%, #4E0E8B 85.68%);
+  color: #fff;
+  padding-top: 36px;
+  padding-bottom: 28px;
+  font-family: "Inter";
+}
+footer .group1,
+footer .group2 {
+  position: absolute;
+  mix-blend-mode: soft-light;
+  z-index: 1;
+}
+footer .group1 {
+  top: 36px;
+  left: 11.7%;
+}
+footer .group2 {
+  top: 63px;
+  right: 12%;
+}
+footer ul {
+  list-style: none;
+}
+footer p, footer li {
+  font-size: 0.875rem;
+}
+footer li {
+  margin-bottom: 7px;
+}
+footer li:last-of-type {
+  margin-bottom: 0px;
+}
+footer h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+footer .footer-container .footer-logo {
+  z-index: 10;
+}
+footer .footer-container .footer-logo .logo {
+  margin-bottom: 38px;
+}
+footer .footer-container .footer-mid {
+  z-index: 10;
+  gap: 70px;
+}
+footer .footer-container .footer-links {
+  text-align: right;
+  z-index: 10;
+}
+footer .footer-container .footer-links p {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+footer .footer-container .footer-links .links {
+  justify-content: flex-end;
+  gap: 14px;
+}
+footer .footer-container .footer-links .links div {
+  cursor: pointer;
+}
+
+/*------------ Start Media Query ------------*/
+@media all and (max-width: 575px) {
+  footer .group1 {
+    display: none;
+  }
+  footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-container .footer-logo {
+    margin-bottom: 30px;
+  }
+  footer .footer-container .footer-mid {
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  footer .footer-container .footer-links {
+    text-align: left;
+  }
+}
+@media all and (min-width: 576px) and (max-width: 767px) {
+  footer .group1 {
+    display: none;
+  }
+  footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-container .footer-logo {
+    margin-bottom: 30px;
+  }
+  footer .footer-container .footer-mid {
+    margin-bottom: 30px;
+  }
+  footer .footer-container .footer-links {
+    text-align: left;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 991px) {
+  footer .group1 {
+    display: none;
+  }
+  footer .footer-container {
+    flex-wrap: wrap;
+  }
+  footer .footer-container .footer-logo {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  footer .footer-container .footer-mid {
+    width: 70%;
+    gap: 30px;
+  }
+  footer .footer-container .footer-links {
+    width: 30%;
+  }
+}
+@media all and (min-width: 992px) and (max-width: 1199px) {
+  footer .footer-container .footer-mid {
+    gap: 20px;
+  }
+}
+/*------------ End Media Query ------------*/
+
+/*# sourceMappingURL=footer.css.map */

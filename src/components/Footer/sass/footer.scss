@@ -1,0 +1,159 @@
+@use "../../../sass/base/mixin" as *;
+@use "../../../sass/base/vars" as *;
+@use "../../../sass/base/function" as *;
+
+@include fontFace("Inter", "../../../../public/assets/fonts/Inter/static/Inter-Regular.ttf");
+
+footer {
+    background: linear-gradient(102.92deg, #1B004E 16.54%, #72068F 65.06%, #4E0E8B 85.68%);
+    color: $white;
+    padding-top: 36px;
+    padding-bottom: 28px;
+    font-family: "Inter";
+    .group1,
+    .group2  {
+        position: absolute;
+        mix-blend-mode: soft-light;
+        z-index: 1;
+    }
+    .group1 {
+        top: 36px;
+        left: 11.7%;
+    }
+    .group2 {
+        top: 63px;
+        right: 12%;
+    }
+    ul {
+        list-style: none;
+    }
+    p, li {
+        font-size: pxToRem(14);
+    }
+    li {
+        margin-bottom: 7px;
+    }
+    li:last-of-type {
+        margin-bottom: 0px;
+    }
+    h4 {
+        font-size: pxToRem(16);
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+    .footer-container {
+        .footer-logo {
+            z-index: 10;
+            .logo {
+                margin-bottom: 38px;
+            }
+        }
+        .footer-mid {
+            z-index: 10;
+            gap: 70px;
+        }
+        .footer-links {
+            text-align: right;
+            z-index: 10;
+            p {
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+            .links {
+                justify-content: flex-end;
+                gap: 14px;
+                div {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+/*------------ Start Media Query ------------*/
+
+// XSmall Media Query
+
+@media all and (max-width: 575px) {
+    footer {
+        .group1 {
+            display: none;
+        }
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+            .footer-logo {
+                margin-bottom: 30px;
+            }
+            .footer-mid {
+                flex-wrap: wrap;
+                gap: 30px;
+                margin-bottom: 30px;
+            }
+            .footer-links {
+                text-align: left;
+            }
+        }
+    }
+}
+
+// Small Media Query
+
+@media all and (min-width: 576px) and (max-width: 767px) {
+    footer {
+        .group1 {
+            display: none;
+        }
+        .footer-container {
+            flex-direction: column;
+            align-items: center;
+            .footer-logo {
+                margin-bottom: 30px;
+            }
+            .footer-mid {
+                margin-bottom: 30px;
+            }
+            .footer-links {
+                text-align: left;
+            }
+        }
+    }
+}
+
+// Medium Media Query
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    footer {
+        .group1 {
+            display: none;
+        }
+        .footer-container {
+            flex-wrap: wrap;
+            .footer-logo {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            .footer-mid {
+                width: 70%;
+                gap: 30px;
+            }
+            .footer-links {
+                width: 30%;
+            }
+        }
+    }
+}
+
+// Large Media Query
+
+@media all and (min-width: 992px) and (max-width: 1199px) {
+    footer {
+        .footer-container {
+            .footer-mid {
+                gap: 20px;
+            }
+        }
+    }
+}
+
+/*------------ End Media Query ------------*/
