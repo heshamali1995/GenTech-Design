@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/GenTech-Design/static/css/main.31ea6735.css",
+    "main.js": "/GenTech-Design/static/js/main.6d6b2eab.js",
+    "static/js/787.4a8349a2.chunk.js": "/GenTech-Design/static/js/787.4a8349a2.chunk.js",
+    "static/media/Inter-Regular.ttf": "/GenTech-Design/static/media/Inter-Regular.e89cb19905e7db5591b0.ttf",
+    "static/media/Roboto-Regular.ttf": "/GenTech-Design/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
+    "static/media/RobotoCondensed-Regular.ttf": "/GenTech-Design/static/media/RobotoCondensed-Regular.fc3d2f2e3a203d0037c1.ttf",
+    "static/media/Khula-Regular.ttf": "/GenTech-Design/static/media/Khula-Regular.fb31e46d9fa665404f35.ttf",
+    "index.html": "/GenTech-Design/index.html",
+    "main.31ea6735.css.map": "/GenTech-Design/static/css/main.31ea6735.css.map",
+    "main.6d6b2eab.js.map": "/GenTech-Design/static/js/main.6d6b2eab.js.map",
+    "787.4a8349a2.chunk.js.map": "/GenTech-Design/static/js/787.4a8349a2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31ea6735.css",
+    "static/js/main.6d6b2eab.js"
+  ]
+}
